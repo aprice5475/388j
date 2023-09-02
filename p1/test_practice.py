@@ -8,7 +8,7 @@ import practice as p
 
 
 def test_hello_world():
-    assert 'Hello, World!' == p.hello_world()
+    assert "Hello, World!" == p.hello_world()
 
 
 def test_empty_sum_unique():
@@ -33,22 +33,22 @@ def test_sum_unique():
 
 
 def test_single_element_palindrome():
-    assert p.palindrome('')
-    assert p.palindrome('f')
-    assert p.palindrome('7')
+    assert p.palindrome("")
+    assert p.palindrome("f")
+    assert p.palindrome("7")
 
 
 def test_longer_palindromes():
-    assert p.palindrome('aa')
+    assert p.palindrome("aa")
     assert p.palindrome(33)
-    assert not p.palindrome('ab')
+    assert not p.palindrome("ab")
     assert not p.palindrome(48)
 
 
 def test_even_longer_palindromes():
-    assert p.palindrome('racecar')
+    assert p.palindrome("racecar")
     assert p.palindrome(1337331)
-    assert not p.palindrome('python')
+    assert not p.palindrome("python")
     assert not p.palindrome(1234567)
 
 
@@ -97,9 +97,15 @@ def test_num_func_mapper_2():
 def test_pythagorean_triples():
     assert [(3, 4, 5)] == p.pythagorean_triples(10)
     assert [(3, 4, 5), (6, 8, 10)] == p.pythagorean_triples(11)
-    assert [(3, 4, 5), (6, 8, 10), (5, 12, 13), (9, 12, 15), (8, 15, 17)] == p.pythagorean_triples(20)
+    assert [
+        (3, 4, 5),
+        (6, 8, 10),
+        (5, 12, 13),
+        (9, 12, 15),
+        (8, 15, 17),
+    ] == p.pythagorean_triples(20)
+
 
 def test_custom_sort():
     assert [1, 3, 5, 2, 4] == p.custom_sort([1, 2, 3, 4, 5])
     assert [5, 5, 5, 4, 4, 4] == p.custom_sort([4, 5, 4, 5, 5, 4])
-    
