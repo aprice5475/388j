@@ -14,6 +14,7 @@ def sum_unique(l):
 
 
 def palindrome(x):
+    x = str(x)
     return x == x[::-1]
 
 
