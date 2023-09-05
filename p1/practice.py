@@ -35,10 +35,14 @@ def all_multiples(multiple, max_num):
 
 
 def sum_multiples(num):
+    ans = 0
     mult_3 = all_multiples(3, num)
+    m3 = set(mult_3)
+    ans += sum(mult_3)
     mult_5 = all_multiples(5, num)
-
-    return sum(mult_3) + sum(mult_5)
+    m5 = set(mult_5).difference(m3)
+    ans += sum(list(m5))
+    return ans
 
 
 def num_func_mapper(nums, funs):
